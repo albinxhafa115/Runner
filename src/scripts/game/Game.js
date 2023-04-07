@@ -1,6 +1,7 @@
 import { App } from "../system/App";
 import { Scene } from "../system/Scene";
 import { Background } from "./Background";
+import { Hero } from "./Hero";
 import { Platforms } from "./Platforms";
 
 export class Game extends Scene {
@@ -28,6 +29,6 @@ export class Game extends Scene {
 
     update(dt) {
         this.bg.update(dt);
-        this.platfroms.update(dt); 
+        this.platfroms.update(dt);
     }
 }
