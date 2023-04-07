@@ -28,5 +28,6 @@ export class Game extends Scene {
 
     update(dt) {
         this.bg.update(dt);
+        this.platfroms.update(dt); 
     }
 }
