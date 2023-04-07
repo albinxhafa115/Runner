@@ -7,7 +7,7 @@ export const Config = {
     hero: {
         position: {
             x: 350,
-            y: 595
+            y: 325
         }
     },
     loader: Tools.massiveRequire(require["context"]('./../../sprites/', true, /\.(mp3|png|jpe?g)$/)),
