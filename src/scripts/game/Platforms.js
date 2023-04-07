@@ -15,5 +15,13 @@ export class Platforms {
     createPlatform(data) {
         const platform = new Platform(data.rows, data.cols, data.x);
         this.container.addChild(platform.container);
+        this.platforms.push(platform);
+        this.current = platform;
+    }
+
+    update() {
+        if (this.current.container.x + this.current.container.width < window.innerWidth) {
+            this.createPlatform(this.randomData);
+        }
     }
 }
