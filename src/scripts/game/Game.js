@@ -14,9 +14,9 @@ export class Game extends Scene {
             cols: 6,
             x: 200
         });
-     }
-     
-     createPlatform(data) {
+    }
+
+    createPlatform(data) {
         const platform = new Platform(data.rows, data.cols, data.x);
         this.container.addChild(platform.container);
     }
