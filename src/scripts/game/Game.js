@@ -1,6 +1,7 @@
 import { App } from "../system/App";
 import { Scene } from "../system/Scene";
 import { Background } from "./Background";
+import { Platform } from "./Platform";
 
 export class Game extends Scene {
     create() {
