@@ -7,6 +7,7 @@ export class Background {
         this.container = new PIXI.Container();
         this.createSprites();
     }
+
     createSprites() {
         this.sprites = [];
 
@@ -23,23 +24,28 @@ export class Background {
         this.container.addChild(sprite);
         this.sprites.push(sprite);
     }
+
     move(sprite, offset) {
         const spriteRightX = sprite.x + sprite.width;
 
-        const screenLeftX = 0;
+        const screenLeftX  = 0;
 
         if (spriteRightX <= screenLeftX) {
             sprite.x += sprite.width * this.sprites.length;
         }
-
+        
         sprite.x -= offset;
     }
-    
+
     update(dt) {
         const offset = this.speed * dt;
 
         this.sprites.forEach(sprite => {
             this.move(sprite, offset);
         });
+    }
+
+    destroy() {
+        this.container.destroy();
     }
 }
