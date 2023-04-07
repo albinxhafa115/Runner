@@ -9,7 +9,12 @@ export class Game extends Scene {
     createBackground() {
         this.bg = new Background();
         this.container.addChild(this.bg.container);
-    }
+        this.createPlatform({
+            rows: 4,
+            cols: 6,
+            x: 200
+        });
+     }
     update(dt) {
         this.bg.update(dt);
     }
